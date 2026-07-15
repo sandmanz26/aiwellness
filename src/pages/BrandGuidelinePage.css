@@ -1,8 +1,8 @@
 .bg-page {
   min-height: 100dvh;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans);
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans);
   padding-bottom: 60px;
 }
 
@@ -16,8 +16,8 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border);
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-default);
   backdrop-filter: blur(6px);
 }
 
@@ -32,15 +32,15 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: var(--text);
+  color: var(--color-text-primary);
   text-decoration: none;
-  font-size: 13.5px;
-  font-weight: 600;
+  font-size: var(--font-size-13-5);
+  font-weight: var(--font-weight-semibold);
 }
 
 .bg-topbar-label {
-  font-size: 12px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12);
+  color: var(--color-text-tertiary);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -55,11 +55,11 @@
   height: 56px;
   margin: 0 auto 20px;
   border-radius: 16px;
-  background: var(--gradient-accent);
-  color: #fff;
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 600;
+  background: var(--color-action-gradient);
+  color: var(--color-text-inverse);
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-26);
+  font-weight: var(--font-weight-semibold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,24 +67,24 @@
 }
 
 .bg-hero h1 {
-  font-family: var(--font-serif);
-  font-size: 40px;
-  font-weight: 500;
-  color: var(--accent-strong);
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-40);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-action-primary-strong);
   margin: 0 0 14px;
 }
 
 .bg-hero-sub {
   max-width: 560px;
   margin: 0 auto;
-  font-size: 14.5px;
+  font-size: var(--font-size-14-5);
   line-height: 1.6;
-  color: var(--text-soft);
+  color: var(--color-text-secondary);
 }
 
 .bg-section {
   padding: 44px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 .bg-section:last-of-type {
@@ -92,40 +92,58 @@
 }
 
 .bg-section h2 {
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 500;
+  font-family: var(--type-display-family);
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
   margin: 0 0 10px;
 }
 
 .bg-section h3 {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
   margin: 28px 0 4px;
-  color: var(--text);
+  color: var(--color-text-primary);
+}
+
+.bg-tier-label {
+  font-size: var(--font-size-11-5);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin: 32px 0 4px;
+}
+
+.bg-color-group:first-of-type,
+.bg-type-primitive-row {
+  margin-top: 4px;
+}
+
+.bg-tier-label--semantic {
+  color: var(--color-action-primary-strong);
 }
 
 .bg-section-intro {
   max-width: 640px;
-  font-size: 13.5px;
+  font-size: var(--font-size-13-5);
   line-height: 1.6;
-  color: var(--text-soft);
+  color: var(--color-text-secondary);
   margin: 0 0 20px;
 }
 
 .bg-section code,
 .bg-hero-sub code {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-default);
   border-radius: 5px;
   padding: 1px 6px;
-  font-size: 12px;
+  font-size: var(--font-size-12);
 }
 
 .bg-component-note {
   margin: 0 0 12px;
-  font-size: 12px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12);
+  color: var(--color-text-tertiary);
 }
 
 .bg-color-group {
@@ -146,8 +164,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
   border-radius: var(--radius-md);
   padding: 12px;
 }
@@ -168,18 +186,85 @@
 }
 
 .bg-swatch-meta code {
-  font-size: 12.5px;
-  font-weight: 700;
+  font-size: var(--font-size-12-5);
+  font-weight: var(--font-weight-bold);
   width: fit-content;
 }
 
 .bg-swatch-meta span {
-  font-size: 11.5px;
-  color: var(--text-faint);
+  font-size: var(--font-size-11-5);
+  color: var(--color-text-tertiary);
 }
 
 .bg-swatch-note {
-  color: var(--text-soft) !important;
+  color: var(--color-text-secondary) !important;
+}
+
+.bg-swatch-alias {
+  color: var(--color-action-primary-strong) !important;
+  font-weight: var(--font-weight-semibold);
+}
+
+.bg-type-primitive-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.bg-font-family-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+}
+
+.bg-font-family-sample {
+  font-size: var(--font-size-26);
+  color: var(--color-text-primary);
+}
+
+.bg-font-family-card code {
+  font-size: var(--font-size-11-5);
+  font-weight: var(--font-weight-bold);
+}
+
+.bg-font-family-card span:last-child {
+  font-size: var(--font-size-11-5);
+  color: var(--color-text-tertiary);
+}
+
+.bg-token-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.bg-token-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  min-width: 64px;
+}
+
+.bg-token-chip code {
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-bold);
+}
+
+.bg-token-chip span:last-child {
+  font-size: var(--font-size-11);
+  color: var(--color-text-tertiary);
 }
 
 .bg-type-scale {
@@ -189,11 +274,11 @@
 
 .bg-type-row {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 16px;
   align-items: baseline;
   padding: 16px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 .bg-type-row:last-child {
@@ -207,17 +292,23 @@
 }
 
 .bg-type-label {
-  font-size: 12.5px;
-  font-weight: 700;
+  font-size: var(--font-size-12-5);
+  font-weight: var(--font-weight-bold);
 }
 
-.bg-type-specs {
-  font-size: 11.5px;
-  color: var(--text-faint);
+.bg-type-token {
+  font-size: var(--font-size-11);
+  width: fit-content;
+}
+
+.bg-type-specs,
+.bg-type-usage {
+  font-size: var(--font-size-11-5);
+  color: var(--color-text-tertiary);
 }
 
 .bg-type-sample {
-  color: var(--text);
+  color: var(--color-text-primary);
   overflow-wrap: anywhere;
 }
 
@@ -252,26 +343,26 @@
 .bg-radius-box {
   width: 64px;
   height: 64px;
-  background: var(--accent-soft);
-  border: 1px solid var(--border);
+  background: var(--color-action-primary-subtle);
+  border: 1px solid var(--color-border-default);
 }
 
 .bg-shadow-box {
   width: 64px;
   height: 64px;
   border-radius: var(--radius-md);
-  background: var(--surface);
+  background: var(--color-bg-surface);
 }
 
 .bg-radius-item code,
 .bg-shadow-item code {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-bold);
 }
 
 .bg-radius-item span {
-  font-size: 11px;
-  color: var(--text-faint);
+  font-size: var(--font-size-11);
+  color: var(--color-text-tertiary);
 }
 
 .bg-live-row {
@@ -311,11 +402,11 @@
   align-items: center;
   gap: 8px;
   padding: 14px 8px;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
   border-radius: var(--radius-md);
-  font-size: 11.5px;
-  color: var(--text-soft);
+  font-size: var(--font-size-11-5);
+  color: var(--color-text-secondary);
   text-align: center;
 }
 
@@ -323,8 +414,8 @@
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: var(--bg-alt);
-  color: var(--text);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +423,7 @@
 
 .bg-footer {
   padding-top: 20px;
-  font-size: 12px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12);
+  color: var(--color-text-tertiary);
   text-align: center;
 }

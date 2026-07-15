@@ -3,7 +3,7 @@
   min-height: 100dvh;
   display: flex;
   align-items: stretch;
-  background: var(--bg);
+  background: var(--color-bg-canvas);
 }
 
 .app-frame {
@@ -11,7 +11,7 @@
   flex: 1;
   min-width: 0;
   height: 100dvh;
-  background: var(--bg);
+  background: var(--color-bg-canvas);
   overflow: hidden;
   isolation: isolate;
 }

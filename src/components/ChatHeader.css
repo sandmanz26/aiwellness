@@ -19,7 +19,7 @@
 .icon-btn {
   border: none;
   background: transparent;
-  color: var(--text);
+  color: var(--color-text-primary);
   padding: 8px;
   display: flex;
   align-items: center;
@@ -28,8 +28,8 @@
 }
 
 .icon-btn.round {
-  background: var(--surface);
-  border-radius: 50%;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-circle);
   width: 40px;
   height: 40px;
   margin-left: 0;
@@ -46,11 +46,11 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: var(--surface);
-  border-radius: 999px;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-pill);
   padding: 9px 14px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
   box-shadow: var(--shadow-sm);
 }
 

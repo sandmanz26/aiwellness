@@ -8,22 +8,25 @@
 }
 
 .bubble--user {
-  background: var(--user-bubble);
-  color: #24200f;
+  background: var(--color-chat-user-bubble);
+  color: var(--color-text-primary);
   padding: 14px 18px;
   border-radius: 20px 20px 4px 20px;
   max-width: 82%;
-  font-size: 14.5px;
+  font-family: var(--type-body-family);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
   line-height: 1.45;
   box-shadow: var(--shadow-sm);
 }
 
 .msg-ai {
   max-width: 92%;
-  font-family: var(--font-serif);
-  font-size: 19px;
+  font-family: var(--type-message-family);
+  font-size: var(--type-message-size);
+  font-weight: var(--type-message-weight);
   line-height: 1.42;
-  color: var(--text);
+  color: var(--color-text-primary);
 }
 
 .msg-ai p {
@@ -35,5 +38,5 @@
 }
 
 .msg-ai strong {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }

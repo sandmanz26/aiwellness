@@ -17,7 +17,7 @@
 }
 
 .stat-card {
-  background: var(--surface);
+  background: var(--color-bg-surface);
   border-radius: var(--radius-md);
   padding: 16px;
   box-shadow: var(--shadow-sm);
@@ -51,23 +51,23 @@
 
 .stat-value {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 500;
+  font-family: var(--type-display-family);
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
 }
 
 .stat-value--sm {
-  font-size: 19px;
+  font-size: var(--type-display-sm-size);
 }
 
 .stat-label {
   margin: 4px 0 0;
-  font-size: 12px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12);
+  color: var(--color-text-tertiary);
 }
 
 .panel-card {
-  background: var(--surface);
+  background: var(--color-bg-surface);
   border-radius: var(--radius-md);
   padding: 16px;
   box-shadow: var(--shadow-sm);
@@ -79,8 +79,8 @@
 
 .panel-title {
   margin: 0;
-  font-size: 13px;
-  color: var(--text-faint);
+  font-size: var(--font-size-13);
+  color: var(--color-text-tertiary);
 }
 
 .activity-row {
@@ -89,7 +89,7 @@
   justify-content: space-between;
   gap: 10px;
   padding: 12px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 .activity-row:last-of-type {
@@ -97,21 +97,21 @@
 }
 
 .activity-text {
-  font-size: 13.5px;
+  font-size: var(--font-size-13-5);
   line-height: 1.5;
-  color: var(--text-soft);
+  color: var(--color-text-secondary);
 }
 
 .activity-name {
-  color: var(--text);
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
   text-decoration: underline;
-  text-decoration-color: var(--border);
+  text-decoration-color: var(--color-border-default);
 }
 
 .activity-when {
-  font-size: 11.5px;
-  color: var(--text-faint);
+  font-size: var(--font-size-11-5);
+  color: var(--color-text-tertiary);
   margin-top: 2px;
 }
 
@@ -119,9 +119,9 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--accent-strong);
+  font-size: var(--font-size-12-5);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-action-primary-strong);
   flex-shrink: 0;
   white-space: nowrap;
 }
@@ -130,12 +130,12 @@
   width: 100%;
   margin-top: 6px;
   padding: 10px 0;
-  border-radius: 999px;
-  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-default);
   background: transparent;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
 }
 
 .lineage-list {
@@ -150,8 +150,8 @@
   border: none;
   background: transparent;
   padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-faint);
+  border-bottom: 1px solid var(--color-border-default);
+  color: var(--color-text-tertiary);
   text-align: left;
 }
 
@@ -162,11 +162,11 @@
 .lineage-avatar {
   width: 34px;
   height: 34px;
-  border-radius: 50%;
-  background: var(--gradient-accent);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
+  border-radius: var(--radius-circle);
+  background: var(--color-action-gradient);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,12 +182,12 @@
 }
 
 .lineage-title {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text);
+  font-size: var(--font-size-13-5);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
 }
 
 .lineage-sub {
-  font-size: 11.5px;
-  color: var(--text-faint);
+  font-size: var(--font-size-11-5);
+  color: var(--color-text-tertiary);
 }

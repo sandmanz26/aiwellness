@@ -1,7 +1,7 @@
 .sheet-scrim {
   position: absolute;
   inset: 0;
-  background: rgba(20, 16, 8, 0.4);
+  background: var(--color-scrim);
   z-index: 70;
 }
 
@@ -11,7 +11,7 @@
   right: 0;
   bottom: 0;
   z-index: 80;
-  background: var(--surface);
+  background: var(--color-bg-surface);
   border-radius: 26px 26px 0 0;
   padding: 10px 20px calc(24px + env(safe-area-inset-bottom));
   box-shadow: var(--shadow-lg);
@@ -32,8 +32,8 @@
 .sheet-handle {
   width: 36px;
   height: 4px;
-  border-radius: 999px;
-  background: var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--color-border-default);
   margin: 0 auto 16px;
 }
 
@@ -45,9 +45,9 @@
 }
 
 .sheet-head h2 {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-weight: 500;
+  font-family: var(--type-heading-family);
+  font-size: var(--type-heading-size);
+  font-weight: var(--type-heading-weight);
   margin: 0;
 }
 
@@ -62,7 +62,7 @@
   justify-content: space-between;
   gap: 16px;
   padding: 16px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 .sheet-row:last-child {
@@ -71,22 +71,22 @@
 
 .sheet-row-label {
   margin: 0 0 3px;
-  font-size: 14.5px;
-  font-weight: 600;
+  font-size: var(--font-size-14-5);
+  font-weight: var(--font-weight-semibold);
 }
 
 .sheet-row-desc {
   margin: 0;
-  font-size: 12.5px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12-5);
+  color: var(--color-text-tertiary);
 }
 
 .switch {
   width: 46px;
   height: 27px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: none;
-  background: var(--border);
+  background: var(--color-border-default);
   padding: 3px;
   display: flex;
   align-items: center;
@@ -96,15 +96,15 @@
 }
 
 .switch--on {
-  background: var(--gradient-accent);
+  background: var(--color-action-gradient);
   justify-content: flex-end;
 }
 
 .switch-knob {
   width: 21px;
   height: 21px;
-  border-radius: 50%;
-  background: #fff;
+  border-radius: var(--radius-circle);
+  background: var(--color-bg-surface);
   box-shadow: var(--shadow-sm);
   display: block;
 }

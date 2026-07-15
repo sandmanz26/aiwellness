@@ -35,11 +35,11 @@
   z-index: 20;
   width: 26px;
   height: 26px;
-  border-radius: 50%;
-  background: var(--gradient-accent);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
+  border-radius: var(--radius-circle);
+  background: var(--color-action-gradient);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-bold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,8 +47,8 @@
 }
 
 .rec-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   padding: 16px;
@@ -98,11 +98,11 @@
 
 .rec-title {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-weight: 500;
+  font-family: var(--type-heading-family);
+  font-size: var(--type-heading-size);
+  font-weight: var(--type-heading-weight);
   line-height: 1.25;
-  color: var(--text);
+  color: var(--color-text-primary);
 }
 
 .rec-card-details {
@@ -111,9 +111,9 @@
 
 .rec-desc {
   margin: 10px 0 14px;
-  font-size: 13px;
+  font-size: var(--font-size-13);
   line-height: 1.45;
-  color: var(--text-soft);
+  color: var(--color-text-secondary);
 }
 
 .rec-score {
@@ -124,20 +124,20 @@
 }
 
 .rec-score-label {
-  font-size: 12px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12);
+  color: var(--color-text-tertiary);
 }
 
 .rec-score-pill {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: var(--success-bg);
-  color: var(--success);
-  font-size: 12px;
-  font-weight: 700;
+  background: var(--color-feedback-success-bg);
+  color: var(--color-feedback-success);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-bold);
   padding: 4px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 
 .rec-remove {
@@ -147,22 +147,22 @@
   justify-content: center;
   gap: 6px;
   padding: 9px 0;
-  border-radius: 999px;
-  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-default);
   background: transparent;
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
 }
 
 .rec-remove:active {
-  background: var(--bg);
+  background: var(--color-bg-canvas);
 }
 
 .deck-hint {
   margin: 8px 0 0 4px;
-  font-size: 12px;
-  color: var(--text-faint);
+  font-size: var(--font-size-12);
+  color: var(--color-text-tertiary);
   cursor: pointer;
 }
 
@@ -176,21 +176,21 @@
 .deck-apply {
   flex: 1;
   padding: 11px 0;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
   border: none;
 }
 
 .deck-collapse {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text-soft);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-secondary);
 }
 
 .deck-apply {
-  background: var(--gradient-accent);
-  color: #fff;
+  background: var(--color-action-gradient);
+  color: var(--color-text-inverse);
   box-shadow: var(--shadow-sm);
 }
 
@@ -198,10 +198,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  color: var(--text-soft);
-  background: var(--bg-alt);
-  border: 1px dashed var(--border);
+  font-size: var(--font-size-13);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-subtle);
+  border: 1px dashed var(--color-border-default);
   border-radius: var(--radius-md);
   padding: 12px 14px;
   margin: 4px 0;
@@ -210,7 +210,7 @@
 .deck-empty-dot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background: var(--success);
+  border-radius: var(--radius-circle);
+  background: var(--color-feedback-success);
   flex-shrink: 0;
 }
