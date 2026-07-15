@@ -14,7 +14,8 @@ const STACK_OFFSET = [
   { x: 54, y: 2, rotate: 11, scale: 0.94 },
 ]
 
-const spring = { type: 'spring', stiffness: 380, damping: 34, mass: 0.9 }
+const spring = { type: 'spring', stiffness: 300, damping: 34, mass: 0.9 }
+const fade = { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
 
 export default function RecommendationDeck({ cards, expanded, onToggle, onRemove, onApply }) {
   if (cards.length === 0) {
@@ -35,13 +36,22 @@ export default function RecommendationDeck({ cards, expanded, onToggle, onRemove
         role={!expanded ? 'button' : undefined}
         tabIndex={!expanded ? 0 : undefined}
       >
-        {!expanded && (
-          <motion.div layout className="deck-badge" transition={spring}>
-            {cards.length}
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {!expanded && (
+            <motion.div
+              layout
+              className="deck-badge"
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.6 }}
+              transition={spring}
+            >
+              {cards.length}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-        <AnimatePresence initial={false}>
+        <AnimatePresence initial={false} mode="popLayout">
           {cards.map((card, i) => {
             const offset = STACK_OFFSET[i] || STACK_OFFSET[STACK_OFFSET.length - 1]
             return (
@@ -76,10 +86,10 @@ export default function RecommendationDeck({ cards, expanded, onToggle, onRemove
                   {expanded && (
                     <motion.div
                       className="rec-card-details"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ ...spring, delay: i * 0.05 }}
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 6 }}
+                      transition={{ ...fade, delay: i * 0.04 }}
                     >
                       <p className="rec-desc">{card.description}</p>
                       <div className="rec-score">
