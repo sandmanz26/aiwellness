@@ -4,7 +4,7 @@ import './ChatHeader.css'
 export default function ChatHeader({ coins, onMenu, onProgress, onSettings }) {
   return (
     <header className="chat-header">
-      <button type="button" className="icon-btn" onClick={onMenu} aria-label="Open menu">
+      <button type="button" className="icon-btn menu-btn" onClick={onMenu} aria-label="Open menu">
         <MenuIcon />
       </button>
       <div className="header-actions">

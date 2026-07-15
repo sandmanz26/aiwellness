@@ -10,6 +10,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 4px 12px 6px;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .progress-header h1 {
@@ -23,6 +27,10 @@
   display: flex;
   gap: 8px;
   padding: 10px 20px 4px;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .progress-tab {
@@ -48,4 +56,8 @@
   flex: 1;
   overflow-y: auto;
   padding: 12px 20px calc(24px + env(safe-area-inset-bottom));
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }

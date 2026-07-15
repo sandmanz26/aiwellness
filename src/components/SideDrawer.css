@@ -5,6 +5,13 @@
   z-index: 70;
 }
 
+@media (min-width: 1024px) {
+  .drawer-scrim,
+  .drawer {
+    display: none;
+  }
+}
+
 .drawer {
   position: absolute;
   top: 0;

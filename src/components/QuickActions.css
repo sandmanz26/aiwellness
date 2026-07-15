@@ -4,6 +4,9 @@
   overflow-x: auto;
   padding: 2px 20px 4px;
   -webkit-overflow-scrolling: touch;
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .quick-chip {

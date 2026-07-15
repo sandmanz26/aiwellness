@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import ChatScreen from './screens/ChatScreen'
 import ProgressScreen from './screens/ProgressScreen'
 import SideDrawer from './components/SideDrawer'
+import Sidebar from './components/Sidebar'
 import SettingsSheet from './components/SettingsSheet'
 import { initialMessages, user } from './data/mockData'
 import './App.css'
@@ -21,6 +22,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      <Sidebar onNewSession={newSession} />
       <div className="app-frame">
         <AnimatePresence mode="wait" initial={false}>
           {screen === 'chat' ? (

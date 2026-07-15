@@ -20,6 +20,14 @@
   -webkit-overflow-scrolling: touch;
 }
 
+@media (min-width: 640px) {
+  .deck--expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    overflow: visible;
+  }
+}
+
 .deck-badge {
   position: absolute;
   top: -6px;
@@ -61,6 +69,13 @@
   height: auto;
   scroll-snap-align: start;
   cursor: default;
+}
+
+@media (min-width: 640px) {
+  .deck--expanded .rec-card {
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 .rec-card-top {
