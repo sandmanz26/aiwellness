@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ExploreIcon, SessionsIcon, WellnessIcon, PauseIcon, PlayIcon, PlusIcon } from './icons'
 import { drawerNav, latestSessions, user } from '../data/mockData'
 
@@ -66,6 +67,10 @@ export default function DrawerNav({ onNewSession }) {
       <button type="button" className="drawer-new" onClick={onNewSession}>
         <PlusIcon /> New session
       </button>
+
+      <Link to="/brand-guideline" className="drawer-guideline-link">
+        Brand guideline
+      </Link>
     </>
   )
 }
