@@ -1,0 +1,38 @@
+.app-shell {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.app-frame {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  height: 100dvh;
+  background: var(--bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.app-frame-page {
+  position: absolute;
+  inset: 0;
+  padding-top: env(safe-area-inset-top);
+}
+
+@media (min-width: 431px) {
+  .app-shell {
+    background: #E9E4D6;
+    padding: 32px 0;
+  }
+
+  .app-frame {
+    height: min(100dvh - 64px, 900px);
+    border-radius: 44px;
+    box-shadow: 0 30px 70px rgba(20, 16, 8, 0.28);
+    border: 8px solid #16130D;
+  }
+}

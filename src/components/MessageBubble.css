@@ -1,0 +1,39 @@
+.msg-row {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.msg-row--user {
+  justify-content: flex-end;
+}
+
+.bubble--user {
+  background: var(--user-bubble);
+  color: #24200f;
+  padding: 14px 18px;
+  border-radius: 20px 20px 4px 20px;
+  max-width: 82%;
+  font-size: 14.5px;
+  line-height: 1.45;
+  box-shadow: var(--shadow-sm);
+}
+
+.msg-ai {
+  max-width: 92%;
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.42;
+  color: var(--text);
+}
+
+.msg-ai p {
+  margin: 0 0 12px;
+}
+
+.msg-ai p:last-child {
+  margin-bottom: 0;
+}
+
+.msg-ai strong {
+  font-weight: 600;
+}
